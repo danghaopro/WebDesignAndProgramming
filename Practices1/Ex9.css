@@ -1,0 +1,30 @@
+body {
+  background: #F0F0F0;
+}
+
+.price {
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  border: 1px solid #8A8A8A;
+  width: 800px;
+}
+
+.price th {
+  margin: 0;
+  padding: 4px 6px;
+  border: 1px solid #8A8A8A;
+  background-color: #C5C5C5;
+  font-size: 20px;
+}
+
+.price td {
+  margin: 0;
+  padding: 4px;
+  border: 1px solid #8A8A8A;
+}
+
+.head {
+  font-weight: bold;
+}

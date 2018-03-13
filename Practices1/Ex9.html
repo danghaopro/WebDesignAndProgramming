@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Exercises 9</title>
+  <link rel="stylesheet" href="Ex9.css">
+</head>
+
+<body>
+  <h1>Nguyễn Đăng Hào - 20155470</h1>
+  <div class="head">BẢNG GIÁ ĐĂNG KÝ CƯỚC DỊCH VỤ INTERNET</div>
+  <table class="price">
+    <tr>
+      <th colspan="2" width="50%">VNN</th>
+      <th colspan="2">FPT</th>
+    </tr>
+    <tr>
+      <th colspan="2">Cước truy cập Internet</th>
+      <th colspan="2">Thẻ kết nối Internet</th>
+    </tr>
+    <tr align=center>
+      <td style="font-weight: bold; font-style: italic;" width="25%">Thời gian</td>
+      <td style="font-weight: bold; font-style: italic;" width="25%">Cước truy cập (đ/ph)</td>
+      <td style="font-weight: bold; font-style: italic;" width="25%">Số giờ kết nối</td>
+      <td style="font-weight: bold; font-style: italic;" width="25%">Mệnh giá thẻ</td>
+    </tr>
+    <tr align=center>
+      <td>0h-07h</td>
+      <td>100</td>
+      <td>14h</td>
+      <td>100.000đ</td>
+    </tr>
+    <tr align=center>
+      <td>07h-19h</td>
+      <td>210</td>
+      <td>33h</td>
+      <td>200.000đ</td>
+    </tr>
+    <tr align=center>
+      <td>19h-24h</td>
+      <td>150</td>
+      <td>55h</td>
+      <td>300.000đ</td>
+    </tr>
+    <tr>
+      <td colspan="2">Cước thuê bao trong tháng: <u style="font-weight: bold;">27.273đ/tháng</u></td>
+      <td align=center>110h</td>
+      <td align=center>500.000đ</td>
+    </tr>
+  </table>
+  <div class="head">NHẬP THÔNG TIN MUA THẺ</div>
+  <form method="post">
+    <table>
+      <tr>
+        <td>Họ và tên:</td>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <td>Số CMND:</td>
+        <td><input type="text"></td>
+      </tr>
+    </table>
+    <u style="font-weight: bold;">Đăng ký:</u><br>
+    <table>
+      <tr>
+        <td>Mua thẻ:</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="radio" name="price" checked>100.000đ</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="radio" name="price">200.000đ</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="radio" name="price">300.000đ</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="radio" name="price">500.000đ</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="submit" value="Cập nhật"></td>
+        <td><input type="submit" value="Hủy bỏ"></td>
+      </tr>
+    </table>
+  </form>
+
+</body>
+
+</html>
