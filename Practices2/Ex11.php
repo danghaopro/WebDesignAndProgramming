@@ -8,9 +8,12 @@
     <?php
       for ($i = 1; $i <= 200; $i++) {
         if ($i % 2 == 0) {// Chia het cho 2
-          echo '<b style="color: red;">' . $i . '</b><br>';
+          echo '<b style="color: red;">' . $i . '</b>';
         } else {
-          echo '<i style="color: blue;">' . $i . '</i><br>';
+          echo '<i style="color: blue;">' . $i . '</i>';
+        }
+        if ($i % 10 == 0) {
+          echo "<br>";
         }
       }
     ?>
