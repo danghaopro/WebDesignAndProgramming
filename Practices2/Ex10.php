@@ -10,8 +10,8 @@
     <?php
       $j=10;
       do {
-        echo $j."<br>";
-        $j--;
+          echo $j."<br>";
+          $j--;
       } while ($j > 0);
     ?>
 

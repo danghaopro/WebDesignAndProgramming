@@ -10,13 +10,14 @@
     <?php
       $a = 100;
       /* global scope */
-      function Test() {
-        global $a;
-        $i = 10;
-        $a += 10;
-        echo "<br>a := $a";
-        echo "<br>i := $i";
-        /* reference to local scope variable */
+      function Test()
+      {
+          global $a;
+          $i = 10;
+          $a += 10;
+          echo "<br>a := $a";
+          echo "<br>i := $i";
+          /* reference to local scope variable */
       }
       Test();
       echo "<br>a := $a";
