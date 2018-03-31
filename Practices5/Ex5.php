@@ -99,8 +99,9 @@
         }
         $values = substr($values, 0, -2);
         $sql = "INSERT INTO {$tables[$table]} {$insertValue[$table]} VALUES ({$values})";
-        echo $sql;
-        // $con->query($sql);
+        // echo $sql;
+        $con->query($sql);
+        echo "<h1>Da them {$con->affected_rows} hang</h1>";
     }
 
     function Upd()
@@ -131,8 +132,9 @@
         }
         $where = substr($where, 0, -5);
         $sql = "UPDATE {$tables[$table]} SET {$set} WHERE {$where}";
-        echo $sql;
-        // $con->query($sql);
+        // echo $sql;
+        $con->query($sql);
+        echo "<h1>Da update {$con->affected_rows} hang</h1>";
     }
 
     function Del()
@@ -157,8 +159,9 @@
         }
         $where = substr($where, 0, -5);
         $sql = "DELETE FROM {$tables[$table]} WHERE {$where}";
-        echo $sql;
-        // $con->query($sql);
+        // echo $sql;
+        $con->query($sql);
+        echo "<h1>Da xoa {$con->affected_rows} hang</h1>";
     }
     $host = 'localhost';
     $user = 'root';
