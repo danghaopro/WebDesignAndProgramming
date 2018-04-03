@@ -39,7 +39,7 @@
                     <tr>
                         <td></td>
                         <td>
-                            &nbsp;<input class="submit" type="submit" name="submit" value="OK">
+                            &nbsp;<input class="submit" type="submit" name="submit" value="Tính">
                         </td>
                     </tr>
                 </form>
@@ -51,6 +51,11 @@
             $first = $_POST['first'];
             $second = $_POST['second'];
             $pheptinhs = array('add' => 'Cộng', 'sub' => 'Trừ', 'mul' => 'Nhân', 'div' => 'Chia');
+            if (!is_numeric($first) || !is_numeric($second)) {
+                echo "ERROR: Input not a Number!<br>";
+                echo '<a href="javascript:window.history.back(-1);">Quay lại</a>';
+                exit();
+            }
             switch ($pheptinh) {
                 case 'add':
                     $result = $first + $second;
@@ -62,13 +67,8 @@
                     $result = $first * $second;
                     break;
                 case 'div':
-                    $result = $second == 0 ? 'ERORR: chia cho 0!' : ($first + $second);
+                    $result = $second == 0 ? 'ERORR: chia cho 0!' : ($first / $second);
                     break;
-            }
-            if (!is_numeric($first) || !is_numeric($second)) {
-                echo "ERROR: Input not a Number!<br>";
-                echo '<a href="javascript:window.history.back(-1);">Quay lại</a>';
-                exit();
             } ?>
             <hr>
             <h3>KẾT QUẢ PHÉP TÍNH</h3>

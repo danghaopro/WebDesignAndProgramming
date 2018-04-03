@@ -81,7 +81,7 @@
                         <tr>
                             <td></td>
                             <td>
-                                <input type="submit" value="Xem kết quả" name="submit">
+                                <input type="submit" value="Tính số ngày" name="submit">
                             </td>
                         </tr>
                         <tr>

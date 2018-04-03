@@ -23,7 +23,7 @@
                     <td>Industry</td>
                     <td>
                         :&nbsp;
-                        <select name="industry" multiple>
+                        <select name="industry[]" multiple>
                             <option value="AUT">Automobile</option>
                             <option value="FOO">Foods</option>
                             <option value="ENG">Enginering</option>
@@ -41,8 +41,7 @@
         </table>
         <?php
         if (isset($_GET['submit'])):
-            $Province = $_GET['province'];
-            $Industry = $_GET['industry']; ?>
+            $Province = $_GET['province'];?>
             <table>
                 <tr>
                     <td>Province</td>
@@ -50,7 +49,17 @@
                 </tr>
                 <tr>
                     <td>Industry</td>
-                    <td>:&nbsp;<?php echo $Industry; ?></td>
+                    <td>:&nbsp;
+                        <?php
+                        if (isset($_GET['industry'])) {
+                            foreach ($_GET['industry'] as $industry) {
+                                echo "{$industry}, ";
+                            }
+                        } else {
+                            echo "Not selected";
+                        }
+                        ?>
+                    </td>
                 </tr>
             </table>
         <?php endif; ?>

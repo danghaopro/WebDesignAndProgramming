@@ -72,7 +72,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Chỉ số mới:</td>
+                            <td>Số tiền thanh toán:</td>
                             <td>
                                 <input type="text" name="total" value="<?php echo $total; ?>" disabled>
                             </td>
