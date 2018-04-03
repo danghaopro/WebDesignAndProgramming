@@ -14,7 +14,7 @@
 
         $con = new mysqli($host, $user, $pass);
         if ($con->connect_error) {
-            echo "Khong ket noi duoc MySQL Database";
+            echo "Không kết nối được MySQL Database";
             exit();
         }
         $con->set_charset('utf8');
@@ -23,30 +23,32 @@
         $stSQL = "SELECT * FROM khoa";
         $result = $con->query($stSQL);
         $totalRows = $result->num_rows; ?>
-        <h3>Tong so mau tin tim thay: <?php echo $totalRows; ?></h3>
+        <h3>Tổng số khóa học tìm thấy: <?php echo $totalRows; ?></h3>
         <table>
             <tr>
-                <th><b>Mã khoa</b></th>
-                <th><b>Tên khoa</b></th>
+                <th>Mã khóa học</th>
+                <th>Tên khóa học</th>
             </tr>
             <?php
-            if ($totalRows > 0) {
-                $i=0;
-                while ($row = $result->fetch_assoc()) {
-                    $i+=1; ?>
-                    <tr valign="top">
-                        <td><?php echo "{$row["makh"]}"; ?> </td>
-                        <td ><?=$row["tenkhoa"]?></td>
+            if ($totalRows > 0):
+                while ($row = $result->fetch_assoc()): ?>
+                    <tr>
+                        <td><?php echo "{$row['makh']}"; ?></td>
+                        <td><?php echo "{$row['tenkhoa']}"; ?></td>
                     </tr>
-                <?php }
-            } else { ?>
-                <tr valign="top">
-                    <td >&nbsp;</td>
-                    <td > <b><font face="Arial" color="#FF0000">
-                        Khong tim thay thong tin khoa hoc!</font></b>
+                <?php endwhile;
+            else: ?>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <b>
+                            <font color="#FF0000">
+                                Không tìm thấy thông tin khóa học!
+                            </font>
+                        </b>
                     </td>
                 </tr>
-            <?php }
+            <?php endif;
             $con->close(); ?>
         </table>
     </body>

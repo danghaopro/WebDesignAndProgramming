@@ -5,12 +5,12 @@
         <title>Exercises 2</title>
         <script language=JavaScript>
             function checkInput() {
-                if (document.frmPHP.txtID.value=="") {
+                if (document.frmPHP.txtID.value == "") {
                     alert("Invalid ID, Please enter ID");
                     document.frmPHP.txtID.focus();
                     return false;
                 }
-                if (document.frmPHP.txtName.value=="") {
+                if (document.frmPHP.txtName.value == "") {
                     alert("Please enter Name");
                     document.frmPHP.txtName.focus();
                     return false;
@@ -24,28 +24,29 @@
         <table>
             <form name="frmPHP" method="post" action="Ex2.php" onsubmit="return checkInput();">
                 <tr>
-                    <td align="left" class="content-sm"><b>
-                        Please enter ID and Name
-                    </b></td>
+                    <th>
+                        Please enter ID and Name to insert
+                    </th>
                 </tr>
                 <tr>
-                    <td align="left" >ID:</td>
+                    <td>ID:</td>
                 </tr>
                 <tr>
-                    <td align="left">
+                    <td>
                         <input type="text" name="txtID" size="25" maxlength="3" class="textbox">
                     </td>
                 </tr>
                 <tr>
-                    <td align="left" >Name:</td>
+                    <td>Name:</td>
                 </tr>
                 <tr>
-                    <td align="left" >
+                    <td>
                         <input type="text" name="txtName" size="25" maxlength="50" class="textbox">
                     </td>
                 </tr>
                 <tr>
-                    <td align="left" valign="top"> <br>
+                    <td>
+                        <br>
                         <input type="submit" value="Submit" class="button" name="submit">
                         <input type="reset" value="Reset" class="button">
                     </td>
@@ -54,7 +55,7 @@
         </table>
         <?php
         if (isset($_POST['submit'])) {
-            echo "<h3>Them khoa hoc</h3>";
+            echo "<h3>INSERT khóa học</h3>";
             $host = 'localhost';
             $user = 'root';
             $pass = '123456';
@@ -62,7 +63,7 @@
 
             $con = new mysqli($host, $user, $pass);
             if ($con->connect_error) {
-                echo "Khong ket noi duoc MySQL Database";
+                echo "Không kết nối được MySQL Database";
                 exit();
             }
             $con->set_charset('utf8');
@@ -77,7 +78,7 @@
                 $affectrow = $con->affected_rows;
             }
             $con->close();
-            echo "So mau tin them vao {$affectrow}";
+            echo "Số khóa học đã thêm vào: {$affectrow}";
         } ?>
     </body>
 </html>

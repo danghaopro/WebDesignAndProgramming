@@ -207,16 +207,16 @@
                                         </tr>
                                         <tr style="text-align: center;">
                                             <th>MaSV</th>
-                                            <th>User</th>
-                                            <th>Pass</th>
-                                            <th>Ho</th>
-                                            <th>Ten</th>
-                                            <th>Gioi tinh</th>
-                                            <th>Ngay sinh</th>
-                                            <th>Noi sinh</th>
-                                            <th>Dia chi</th>
-                                            <th>MaKH</th>
-                                            <th>Hoc bong</th>
+                                            <th>Username</th>
+                                            <th>Password</th>
+                                            <th>HoSV</th>
+                                            <th>TenSV</th>
+                                            <th>GioiTinh</th>
+                                            <th>NgaySinh</th>
+                                            <th>NoiSinh</th>
+                                            <th>DiaChi</th>
+                                            <th>MaKhoa</th>
+                                            <th>HocBong</th>
                                         </tr>
                                         <!-- mysql -->
                                         <?php if (isset($con)) {
@@ -251,67 +251,67 @@
                                                 <td colspan="2" style="text-align: center;">INSERT</td>
                                             </tr>
                                             <tr>
-                                                <td>ID:</td>
+                                                <td>MaSV:</td>
                                                 <td>
                                                     <input type="text" name="idInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>User:</td>
+                                                <td>Username:</td>
                                                 <td>
                                                     <input type="text" name="userInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Pass:</td>
+                                                <td>Password:</td>
                                                 <td>
                                                     <input type="text" name="passInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Ho:</td>
+                                                <td>HoSV:</td>
                                                 <td>
                                                     <input type="text" name="hoInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Ten:</td>
+                                                <td>TenSV:</td>
                                                 <td>
                                                     <input type="text" name="tenInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Gioi tinh:</td>
+                                                <td>GioiTinh:</td>
                                                 <td>
                                                     <input type="text" name="gtInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Ngay sinh:</td>
+                                                <td>NgaySinh:</td>
                                                 <td>
                                                     <input type="text" name="ngsInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Noi sinh:</td>
+                                                <td>NoiSinh:</td>
                                                 <td>
                                                     <input type="text" name="nsInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Dia chi:</td>
+                                                <td>DiaChi:</td>
                                                 <td>
                                                     <input type="text" name="dcInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>MaKH:</td>
+                                                <td>MaKhoa:</td>
                                                 <td>
                                                     <input type="text" name="khInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Hoc bong:</td>
+                                                <td>HocBong:</td>
                                                 <td>
                                                     <input type="text" name="hbInsSV">
                                                 </td>
@@ -331,67 +331,67 @@
                                                 <td colspan="2" style="text-align: center;">UPDATE</td>
                                             </tr>
                                             <tr>
-                                                <td>ID:</td>
+                                                <td>MaSV:</td>
                                                 <td>
                                                     <input type="text" name="idUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>User:</td>
+                                                <td>Username:</td>
                                                 <td>
                                                     <input type="text" name="userUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Pass:</td>
+                                                <td>Password:</td>
                                                 <td>
                                                     <input type="text" name="passUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Ho:</td>
+                                                <td>HoSV:</td>
                                                 <td>
                                                     <input type="text" name="hoUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Ten:</td>
+                                                <td>TenSV:</td>
                                                 <td>
                                                     <input type="text" name="tenUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Gioi tinh:</td>
+                                                <td>GioiTinh:</td>
                                                 <td>
                                                     <input type="text" name="gtUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Ngay sinh:</td>
+                                                <td>NgaySinh:</td>
                                                 <td>
                                                     <input type="text" name="ngsUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Noi sinh:</td>
+                                                <td>NoiSinh:</td>
                                                 <td>
                                                     <input type="text" name="nsUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Dia chi:</td>
+                                                <td>DiaChi:</td>
                                                 <td>
                                                     <input type="text" name="dcUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>MaKH:</td>
+                                                <td>MaKhoa:</td>
                                                 <td>
                                                     <input type="text" name="khUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Hoc bong:</td>
+                                                <td>HocBong:</td>
                                                 <td>
                                                     <input type="text" name="hbUpdSV">
                                                 </td>
@@ -411,7 +411,7 @@
                                                 <td colspan="2" style="text-align: center;">DELETE</td>
                                             </tr>
                                             <tr>
-                                                <td>ID:</td>
+                                                <td>MaSV:</td>
                                                 <td>
                                                     <input type="text" name="idDelSV">
                                                 </td>
@@ -443,9 +443,9 @@
                                             <td colspan="3" style="text-align: center;">SELECT</td>
                                         </tr>
                                         <tr style="text-align: center;">
-                                            <th>Ma mon hoc</th>
-                                            <th>Ten mon hoc</th>
-                                            <th>So tiet</th>
+                                            <th>MaMH</th>
+                                            <th>TenMH</th>
+                                            <th>SoTiet</th>
                                         </tr>
                                         <!-- mysql -->
                                         <?php if (isset($con)) {
@@ -472,19 +472,19 @@
                                                 <td colspan="2" style="text-align: center;">INSERT</td>
                                             </tr>
                                             <tr>
-                                                <td>ID:</td>
+                                                <td>MaMH:</td>
                                                 <td>
                                                     <input type="text" name="idInsMH">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Ten:</td>
+                                                <td>TenMH:</td>
                                                 <td>
                                                     <input type="text" name="nameInsMH">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>So tiet:</td>
+                                                <td>SoTiet:</td>
                                                 <td>
                                                     <input type="text" name="numInsMH">
                                                 </td>
@@ -504,19 +504,19 @@
                                                 <td colspan="2" style="text-align: center;">UPDATE</td>
                                             </tr>
                                             <tr>
-                                                <td>ID:</td>
+                                                <td>MaMH:</td>
                                                 <td>
                                                     <input type="text" name="idUpdMH">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Ten:</td>
+                                                <td>TenMH:</td>
                                                 <td>
                                                     <input type="text" name="nameUpdMH">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>So tiet:</td>
+                                                <td>SoTiet:</td>
                                                 <td>
                                                     <input type="text" name="numUpdMH">
                                                 </td>
@@ -536,7 +536,7 @@
                                                 <td colspan="2" style="text-align: center;">DELETE</td>
                                             </tr>
                                             <tr>
-                                                <td>ID:</td>
+                                                <td>MaMH:</td>
                                                 <td>
                                                     <input type="text" name="idDelMH">
                                                 </td>
@@ -568,8 +568,8 @@
                                             <td colspan="3" style="text-align: center;">SELECT</td>
                                         </tr>
                                         <tr style="text-align: center;">
-                                            <th>Ma sinh vien</th>
-                                            <th>Ma mon hoc</th>
+                                            <th>MaSV</th>
+                                            <th>MaMH</th>
                                             <th>Diem</th>
                                         </tr>
                                         <!-- mysql -->
