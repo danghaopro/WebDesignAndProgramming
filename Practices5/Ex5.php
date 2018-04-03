@@ -34,6 +34,18 @@
                 alert("Invalid ID, Please enter ID");
                 return false;
             }
+            if (id == 'DelSV' || id == 'DelMH') {
+                return confirm('Bạn có chắc chắn muốn xóa ' + inputID.value);
+            }
+            if (id == 'DelKQ') {
+                var inputSV = document.getElementsByName("sv" + id)[0];
+                var inputMH = document.getElementsByName("mh" + id)[0];
+                if (inputSV.value == "" || inputMH.value == "") {
+                    alert("Invalid ID, Please enter ID");
+                    return false;
+                }
+                return confirm('Bạn có chắc chắn muốn xóa ' + inputSV.value + ' - ' + inputMH.value);
+            }
             return true;
         }
     </script>
