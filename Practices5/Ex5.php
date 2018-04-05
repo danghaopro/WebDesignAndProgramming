@@ -49,6 +49,25 @@
             return true;
         }
     </script>
+    <script type="text/javascript" src="jquery-latest.js"></script>
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $('#UpdSV').change(function() {
+                var val = $("#UpdSV option:selected").text();
+                var svid = $('#SV' + val + ' td#username').text();
+                $('#userUpdSV').val($('#SV' + val + ' td#username').text());
+                $('#passUpdSV').val($('#SV' + val + ' td#password').text());
+                $('#hoUpdSV').val($('#SV' + val + ' td#hosv').text());
+                $('#tenUpdSV').val($('#SV' + val + ' td#tensv').text());
+                $('#gtUpdSV').val($('#SV' + val + ' td#gioitinh').text());
+                $('#ngsUpdSV').val($('#SV' + val + ' td#ngaysinh').text());
+                $('#nsUpdSV').val($('#SV' + val + ' td#noisinh').text());
+                $('#dcUpdSV').val($('#SV' + val + ' td#diachi').text());
+                $('#khUpdSV').val($('#SV' + val + ' td#makh').text());
+                $('#hbUpdSV').val($('#SV' + val + ' td#hocbong').text());
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -235,18 +254,18 @@
                                             $result = $con->query('SELECT * FROM sinhvien');
                                             if ($result->num_rows > 0) {
                                                 while ($row = $result->fetch_assoc()) {
-                                                    echo "<tr>";
-                                                    echo "<td>{$row['masv']}</td>";
-                                                    echo "<td>{$row['username']}</td>";
-                                                    echo "<td>{$row['password']}</td>";
-                                                    echo "<td>{$row['hosv']}</td>";
-                                                    echo "<td>{$row['tensv']}</td>";
-                                                    echo "<td>{$row['gioitinh']}</td>";
-                                                    echo "<td>{$row['ngaysinh']}</td>";
-                                                    echo "<td>{$row['noisinh']}</td>";
-                                                    echo "<td>{$row['diachi']}</td>";
-                                                    echo "<td>{$row['makh']}</td>";
-                                                    echo "<td>{$row['hocbong']}</td>";
+                                                    echo "<tr id='SV{$row['masv']}'>";
+                                                    echo "<td id='masv'>{$row['masv']}</td>";
+                                                    echo "<td id='username'>{$row['username']}</td>";
+                                                    echo "<td id='password'>{$row['password']}</td>";
+                                                    echo "<td id='hosv'>{$row['hosv']}</td>";
+                                                    echo "<td id='tensv'>{$row['tensv']}</td>";
+                                                    echo "<td id='gioitinh'>{$row['gioitinh']}</td>";
+                                                    echo "<td id='ngaysinh'>{$row['ngaysinh']}</td>";
+                                                    echo "<td id='noisinh'>{$row['noisinh']}</td>";
+                                                    echo "<td id='diachi'>{$row['diachi']}</td>";
+                                                    echo "<td id='makh'>{$row['makh']}</td>";
+                                                    echo "<td id='hocbong'>{$row['hocbong']}</td>";
                                                     echo "</tr>";
                                                 }
                                             } else {
@@ -265,67 +284,67 @@
                                             <tr>
                                                 <td>MaSV:</td>
                                                 <td>
-                                                    <input type="text" name="idInsSV">
+                                                    <input type="text" name="idInsSV" value="">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>Username:</td>
                                                 <td>
-                                                    <input type="text" name="userInsSV">
+                                                    <input id="userInsSV" type="text" name="userInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>Password:</td>
                                                 <td>
-                                                    <input type="text" name="passInsSV">
+                                                    <input id="passInsSV" type="text" name="passInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>HoSV:</td>
                                                 <td>
-                                                    <input type="text" name="hoInsSV">
+                                                    <input id="hoInsSV" type="text" name="hoInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>TenSV:</td>
                                                 <td>
-                                                    <input type="text" name="tenInsSV">
+                                                    <input id="tenInsSV" type="text" name="tenInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>GioiTinh:</td>
                                                 <td>
-                                                    <input type="text" name="gtInsSV">
+                                                    <input id="gtInsSV" type="text" name="gtInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>NgaySinh:</td>
                                                 <td>
-                                                    <input type="text" name="ngsInsSV">
+                                                    <input id="ngsInsSV" type="text" name="ngsInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>NoiSinh:</td>
                                                 <td>
-                                                    <input type="text" name="nsInsSV">
+                                                    <input id="nsInsSV" type="text" name="nsInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>DiaChi:</td>
                                                 <td>
-                                                    <input type="text" name="dcInsSV">
+                                                    <input id="dcInsSV" type="text" name="dcInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>MaKhoa:</td>
                                                 <td>
-                                                    <input type="text" name="khInsSV">
+                                                    <input id="khInsSV" type="text" name="khInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>HocBong:</td>
                                                 <td>
-                                                    <input type="text" name="hbInsSV">
+                                                    <input id="hbInsSV" type="text" name="hbInsSV">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -345,67 +364,76 @@
                                             <tr>
                                                 <td>MaSV:</td>
                                                 <td>
-                                                    <input type="text" name="idUpdSV">
+                                                    <select id="UpdSV" name="idUpdSV">
+                                                        <?php if (isset($con)) {
+                                                            $result = $con->query('SELECT masv FROM sinhvien');
+                                                            if ($result->num_rows > 0) {
+                                                                while ($row = $result->fetch_assoc()) {
+                                                                    echo "<option>{$row['masv']}</option>";
+                                                                }
+                                                            }
+                                                        } ?>
+                                                    </select>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>Username:</td>
                                                 <td>
-                                                    <input type="text" name="userUpdSV">
+                                                    <input id="userUpdSV" type="text" name="userUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>Password:</td>
                                                 <td>
-                                                    <input type="text" name="passUpdSV">
+                                                    <input id="passUpdSV" type="text" name="passUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>HoSV:</td>
                                                 <td>
-                                                    <input type="text" name="hoUpdSV">
+                                                    <input id="hoUpdSV" type="text" name="hoUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>TenSV:</td>
                                                 <td>
-                                                    <input type="text" name="tenUpdSV">
+                                                    <input id="tenUpdSV" type="text" name="tenUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>GioiTinh:</td>
                                                 <td>
-                                                    <input type="text" name="gtUpdSV">
+                                                    <input id="gtUpdSV" type="text" name="gtUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>NgaySinh:</td>
                                                 <td>
-                                                    <input type="text" name="ngsUpdSV">
+                                                    <input id="ngsUpdSV" type="text" name="ngsUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>NoiSinh:</td>
                                                 <td>
-                                                    <input type="text" name="nsUpdSV">
+                                                    <input id="nsUpdSV" type="text" name="nsUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>DiaChi:</td>
                                                 <td>
-                                                    <input type="text" name="dcUpdSV">
+                                                    <input id="dcUpdSV" type="text" name="dcUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>MaKhoa:</td>
                                                 <td>
-                                                    <input type="text" name="khUpdSV">
+                                                    <input id="khUpdSV" type="text" name="khUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>HocBong:</td>
                                                 <td>
-                                                    <input type="text" name="hbUpdSV">
+                                                    <input id="hbUpdSV" type="text" name="hbUpdSV">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -425,7 +453,16 @@
                                             <tr>
                                                 <td>MaSV:</td>
                                                 <td>
-                                                    <input type="text" name="idDelSV">
+                                                    <select id="DelSV" name="idDelSV">
+                                                        <?php if (isset($con)) {
+                                                            $result = $con->query('SELECT masv FROM sinhvien');
+                                                            if ($result->num_rows > 0) {
+                                                                while ($row = $result->fetch_assoc()) {
+                                                                    echo "<option>{$row['masv']}</option>";
+                                                                }
+                                                            }
+                                                        } ?>
+                                                    </select>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -611,13 +648,31 @@
                                             <tr>
                                                 <td>MaSV:</td>
                                                 <td>
-                                                    <input type="text" name="svInsKQ">
+                                                    <select id="UpdSV" name="svInsKQ">
+                                                        <?php if (isset($con)) {
+                                                            $result = $con->query('SELECT masv FROM sinhvien');
+                                                            if ($result->num_rows > 0) {
+                                                                while ($row = $result->fetch_assoc()) {
+                                                                    echo "<option>{$row['masv']}</option>";
+                                                                }
+                                                            }
+                                                        } ?>
+                                                    </select>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>MaMH:</td>
                                                 <td>
-                                                    <input type="text" name="mhInsKQ">
+                                                    <select id="UpdSV" name="mhInsKQ">
+                                                        <?php if (isset($con)) {
+                                                            $result = $con->query('SELECT mamh FROM monhoc');
+                                                            if ($result->num_rows > 0) {
+                                                                while ($row = $result->fetch_assoc()) {
+                                                                    echo "<option>{$row['mamh']}</option>";
+                                                                }
+                                                            }
+                                                        } ?>
+                                                    </select>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -643,13 +698,31 @@
                                             <tr>
                                                 <td>MaSV:</td>
                                                 <td>
-                                                    <input type="text" name="svUpdKQ">
+                                                    <select id="UpdSV" name="svUpdKQ">
+                                                        <?php if (isset($con)) {
+                                                            $result = $con->query('SELECT masv FROM sinhvien');
+                                                            if ($result->num_rows > 0) {
+                                                                while ($row = $result->fetch_assoc()) {
+                                                                    echo "<option>{$row['masv']}</option>";
+                                                                }
+                                                            }
+                                                        } ?>
+                                                    </select>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>MaMH:</td>
                                                 <td>
-                                                    <input type="text" name="mhUpdKQ">
+                                                    <select id="UpdSV" name="mhUpdKQ">
+                                                        <?php if (isset($con)) {
+                                                            $result = $con->query('SELECT mamh FROM monhoc');
+                                                            if ($result->num_rows > 0) {
+                                                                while ($row = $result->fetch_assoc()) {
+                                                                    echo "<option>{$row['mamh']}</option>";
+                                                                }
+                                                            }
+                                                        } ?>
+                                                    </select>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -675,13 +748,31 @@
                                             <tr>
                                                 <td>MaSV:</td>
                                                 <td>
-                                                    <input type="text" name="svDelKQ">
+                                                    <select id="UpdSV" name="svDelKQ">
+                                                        <?php if (isset($con)) {
+                                                            $result = $con->query('SELECT masv FROM sinhvien');
+                                                            if ($result->num_rows > 0) {
+                                                                while ($row = $result->fetch_assoc()) {
+                                                                    echo "<option>{$row['masv']}</option>";
+                                                                }
+                                                            }
+                                                        } ?>
+                                                    </select>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>MaMH:</td>
                                                 <td>
-                                                    <input type="text" name="mhDelKQ">
+                                                    <select id="UpdSV" name="mhDelKQ">
+                                                        <?php if (isset($con)) {
+                                                            $result = $con->query('SELECT mamh FROM monhoc');
+                                                            if ($result->num_rows > 0) {
+                                                                while ($row = $result->fetch_assoc()) {
+                                                                    echo "<option>{$row['mamh']}</option>";
+                                                                }
+                                                            }
+                                                        } ?>
+                                                    </select>
                                                 </td>
                                             </tr>
                                             <tr>
