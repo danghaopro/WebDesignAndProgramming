@@ -8,7 +8,7 @@
     <title>Exercises 3 - Student Infomation</title>
 </head>
 <body>
-    <h1></h1>
+    <h1>Nguyễn Đăng Hào - 20155470</h1>
     <?php
     if (isset($_SESSION['idnv'])) {
         $idnv = $_SESSION['idnv'];

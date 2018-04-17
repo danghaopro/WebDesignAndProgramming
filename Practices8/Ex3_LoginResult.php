@@ -11,6 +11,7 @@ session_start();
 </head>
 
 <body>
+    <h1 align='center'>Nguyễn Đăng Hào - 20155470</h1>
     <table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr>
             <td width="800" height="37" align="center" valign="middle" bgcolor="#FFFFCC" style="font-size:18px; color:#FF0000 ">

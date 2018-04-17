@@ -17,6 +17,7 @@ session_start();
 </head>
 
 <body>
+    <h1 align='center'>Nguyễn Đăng Hào - 20155470</h1>
     <form name="form1" method="post">
         <table width="800" border="1" align="center">
             <tr>
