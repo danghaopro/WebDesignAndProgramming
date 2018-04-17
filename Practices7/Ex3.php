@@ -45,6 +45,14 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>Value:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="txtValue" size="25" maxlength="50" class="textbox">
+                    </td>
+                </tr>
+                <tr>
                     <td> <br>
                         <input type="submit" value="Submit" class="button" name="submit">
                         <input type="reset" value="Reset" class="button">
@@ -70,8 +78,9 @@
 
             $txtID = $_POST["txtID"];
             $txtName = $_POST["txtName"];
+            $txtValue = $_POST['txtValue'];
             $affectrow = 0;
-            $sql = "UPDATE sanpham SET tensanpham = '{$txtName}' WHERE idsp = '{$txtID}'";
+            $sql = "UPDATE sanpham SET tensanpham = '{$txtName}', dongia = '{$txtValue}' WHERE idsp = '{$txtID}'";
             $result = $con->query($sql);
             if ($result) {
                 $affectrow = $con->affected_rows;

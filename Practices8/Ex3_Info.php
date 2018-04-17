@@ -19,15 +19,24 @@
         }
         $con->set_charset('utf8');
         $con->select_db('webdesignandprogramming');
-        $result = $con->query("SELECT * FROM sinhvien WHERE masv='{$masv}'");
-        $row = $result->fetch_assoc(); ?>
+        $result = $con->query("SELECT hosv, tensv, mamh, diem FROM sinhvien, ketqua WHERE sinhvien.masv='{$masv}' AND sinhvien.masv = ketqua.masv");
+        ?>
         <table>
+            <tr>
+                <th>HoSV</th>
+                <th>TenSV</th>
+                <th>MaMH</th>
+                <th>Diem</th>
+            </tr>
             <?php
-                foreach ($row as $key => $value) {
-                    echo '<tr>';
-                    echo "<td>{$key}:</td><td>$value</td>";
-                    echo '</tr>';
-                }
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>{$row['hosv']}</td>";
+                echo "<td>{$row['tensv']}</td>";
+                echo "<td>{$row['mamh']}</td>";
+                echo "<td>{$row['diem']}</td>";
+                echo "</tr>";
+            }
             ?>
         </table>
         <a href="Ex3_Logout.php">Đăng xuất</a>

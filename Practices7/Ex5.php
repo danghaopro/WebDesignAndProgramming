@@ -40,6 +40,19 @@
             return true;
         }
     </script>
+    <script type="text/javascript" src="jquery-latest.js"></script>
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $('#UpdHD').change(function() {
+                var val = $("#UpdHD option:selected").text();
+                $('#nlUpdHD').val($('#HD' + val + ' td#nl').text());
+                $('#khUpdHD').val($('#HD' + val + ' td#kh').text());
+                $('#nvUpdHD').val($('#HD' + val + ' td#nv').text());
+                $('#ngUpdHD').val($('#HD' + val + ' td#ng').text());
+                $('#ttUpdHD').val($('#HD' + val + ' td#tt').text());
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -555,15 +568,15 @@
                                             $result = $con->query($query);
                                             if ($result->num_rows > 0) {
                                                 while ($row = $result->fetch_assoc()) {
-                                                    echo "<tr>";
-                                                    echo "<td>{$row['idhd']}</td>";
-                                                    echo "<td>{$row['ngaylaphd']}</td>";
-                                                    echo "<td>{$row['idkh']}</td>";
-                                                    echo "<td>{$row['tenkh']}</td>";
-                                                    echo "<td>{$row['idnv']}</td>";
-                                                    echo "<td>{$row['tennv']}</td>";
-                                                    echo "<td>{$row['ngaygiaohang']}</td>";
-                                                    echo "<td>{$row['tongtien']}</td>";
+                                                    echo "<tr id='HD{$row['idhd']}'>";
+                                                    echo "<td id='id'>{$row['idhd']}</td>";
+                                                    echo "<td id='nl'>{$row['ngaylaphd']}</td>";
+                                                    echo "<td id='kh'>{$row['idkh']}</td>";
+                                                    echo "<td id='tkh'>{$row['tenkh']}</td>";
+                                                    echo "<td id='nv'>{$row['idnv']}</td>";
+                                                    echo "<td id='tnv'>{$row['tennv']}</td>";
+                                                    echo "<td id='ng'>{$row['ngaygiaohang']}</td>";
+                                                    echo "<td id='tt'>{$row['tongtien']}</td>";
                                                     echo "</tr>";
                                                 }
                                             } else {
@@ -650,7 +663,7 @@
                                             <tr>
                                                 <td>idhd:</td>
                                                 <td>
-                                                    <select name="idUpdHD">
+                                                    <select id="UpdHD" name="idUpdHD">
                                                         <?php if (isset($con)) {
                                                             $result = $con->query('SELECT idhd FROM hoadon');
                                                             if ($result->num_rows > 0) {
@@ -665,18 +678,19 @@
                                             <tr>
                                                 <td>ngaylaphd:</td>
                                                 <td>
-                                                    <input type="text" name="nlUpdHD">
+                                                    <input id="nlUpdHD" type="text" name="nlUpdHD">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>idkh:</td>
                                                 <td>
-                                                    <select name="khUpdHD">
+                                                    <select id="khUpdHD" name="khUpdHD">
+                                                        <option value=""></option>
                                                         <?php if (isset($con)) {
                                                             $result = $con->query('SELECT idkh, tenkh FROM khachhang');
                                                             if ($result->num_rows > 0) {
                                                                 while ($row = $result->fetch_assoc()) {
-                                                                    echo "<option value='{$row['idkh']}'>{$row['tenkh']}</option>";
+                                                                    echo "<option id='{$row['idkh']}' value='{$row['idkh']}'>{$row['tenkh']}</option>";
                                                                 }
                                                             }
                                                         } ?>
@@ -686,7 +700,8 @@
                                             <tr>
                                                 <td>idnv:</td>
                                                 <td>
-                                                    <select name="nvUpdHD">
+                                                    <select id="nvUpdHD" name="nvUpdHD">
+                                                        <option value=""></option>
                                                         <?php if (isset($con)) {
                                                             $result = $con->query('SELECT idnv, tennv FROM nhanvien');
                                                             if ($result->num_rows > 0) {
@@ -701,13 +716,13 @@
                                             <tr>
                                                 <td>ngaygiaohang:</td>
                                                 <td>
-                                                    <input type="text" name="ngUpdHD">
+                                                    <input id="ngUpdHD" type="text" name="ngUpdHD">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>tongtien:</td>
                                                 <td>
-                                                    <input type="text" name="ttUpdHD">
+                                                    <input id='ttUpdHD' type="text" name="ttUpdHD">
                                                 </td>
                                             </tr>
                                             <tr>
